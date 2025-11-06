@@ -8,3 +8,4 @@ build/
 .coverage/
 .coverage.*
 node_modules/
+node_modules/
