@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetResQ - Rescue. Foster. Adopt.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Accessibility Bar -->
+    <div class="accessibility-bar">
+        <div class="container">
+            <div class="accessibility-controls">
+                <button class="accessibility-btn" id="contrastToggle">
+                    <i class="fas fa-adjust"></i> High Contrast
+                </button>
+                <button class="accessibility-btn" id="textSizeIncrease">
+                    <i class="fas fa-text-height"></i> Increase Text
+                </button>
+                <button class="accessibility-btn" id="textSizeDecrease">
+                    <i class="fas fa-text-width"></i> Decrease Text
+                </button>
+                <button class="accessibility-btn" id="readAloudToggle">
+                    <i class="fas fa-volume-up"></i> Read Aloud
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-paw"></i>
+                    <span>PetResQ</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="adopt.html">Adopt</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Every Pet Deserves a Home</h1>
+            <p>PetResQ connects stray and abandoned animals with kind people who want to adopt, foster, or support them. Together, we can create a kinder world for animals.</p>
+            <div class="hero-buttons">
+                <a href="adopt.html" class="btn">Adopt a Pet</a>
+                <a href="volunteer.html" class="btn btn-secondary">Become a Volunteer</a>
+                <a href="donate.html" class="btn btn-accent">Make a Donation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>How We Help Animals</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Rescue & Shelter</h3>
+                    <p>We rescue stray and abandoned animals and provide them with safe shelters.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Adoption</h3>
+                    <p>Find your perfect furry companion from our carefully vetted animals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Foster Care</h3>
+                    <p>Provide temporary homes for animals until they find their forever families.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-medical"></i>
+                    </div>
+                    <h3>Medical Care</h3>
+                    <p>All our animals receive necessary vaccinations and medical treatments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="petsRescued">0</h3>
+                    <p>Pets Rescued</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="successfulAdoptions">0</h3>
+                    <p>Successful Adoptions</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="volunteers">0</h3>
+                    <p>Active Volunteers</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="cities">0</h3>
+                    <p>Cities Served</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Pets -->
+    <section class="featured-pets">
+        <div class="container">
+            <h2>Featured Pets Looking for Homes</h2>
+            <div class="pet-grid" id="featuredPetsGrid">
+                <!-- Featured pets will be loaded here -->
+            </div>
+            <div class="text-center">
+                <a href="adopt.html" class="btn">View All Pets</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Helper -->
+    <section class="ai-helper">
+        <div class="container">
+            <h2>Pet Care Assistant</h2>
+            <p>Have questions about pet care? Our AI assistant is here to help!</p>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <i class="fas fa-robot"></i> PetResQ Assistant
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        Hello! I'm here to help with any questions about pet adoption, care, or training. How can I assist you today?
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chatInput" placeholder="Ask a question about pet care...">
+                    <button id="sendMessage" class="btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PetResQ</h3>
+                    <p>Creating a kinder world for animals through digital awareness, community participation, and online adoption management.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="adopt.html">Adopt a Pet</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="stories.html">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Pet Care Blog</a></li>
+                        <li><a href="#">Adoption Process</a></li>
+                        <li><a href="#">Foster Program</a></li>
+                        <li><a href="#">Animal Rights</a></li>
+                        <li><a href="#">Emergency Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rescue Street, Petville</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@petresq.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 PetResQ. All rights reserved. | Rescue. Foster. Adopt.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/ai-helper.js"></script>
+</body>
+</html>

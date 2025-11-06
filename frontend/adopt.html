@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Pet - PetResQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Accessibility Bar -->
+    <div class="accessibility-bar">
+        <div class="container">
+            <div class="accessibility-controls">
+                <button class="accessibility-btn" id="contrastToggle">
+                    <i class="fas fa-adjust"></i> High Contrast
+                </button>
+                <button class="accessibility-btn" id="textSizeIncrease">
+                    <i class="fas fa-text-height"></i> Increase Text
+                </button>
+                <button class="accessibility-btn" id="textSizeDecrease">
+                    <i class="fas fa-text-width"></i> Decrease Text
+                </button>
+                <button class="accessibility-btn" id="readAloudToggle">
+                    <i class="fas fa-volume-up"></i> Read Aloud
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-paw"></i>
+                    <span>PetResQ</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adopt.html" class="active">Adopt</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Find Your Perfect Companion</h1>
+            <p>Browse our adorable pets waiting for their forever homes. Each animal is vaccinated, microchipped, and ready to bring joy to your life.</p>
+        </div>
+    </section>
+
+    <!-- Adoption Process -->
+    <section class="features">
+        <div class="container">
+            <h2>Our Adoption Process</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>1. Browse Pets</h3>
+                    <p>Look through our available pets and find your perfect match based on your lifestyle and preferences.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>2. Submit Application</h3>
+                    <p>Fill out our adoption application form with your details and tell us about your home environment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>3. Meet & Greet</h3>
+                    <p>Schedule a meeting with your chosen pet and our team to ensure it's the right fit for everyone.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>4. Welcome Home</h3>
+                    <p>Complete the adoption paperwork and welcome your new family member home!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pet Listings -->
+    <section class="pet-listings">
+        <div class="container">
+            <h2>Available Pets</h2>
+            <div class="pet-filters">
+                <button class="filter-btn active" data-filter="all">All Pets</button>
+                <button class="filter-btn" data-filter="dog">Dogs</button>
+                <button class="filter-btn" data-filter="cat">Cats</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+            <div class="pet-grid" id="petGrid">
+                <!-- Pets will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Adoption Form -->
+    <section class="form-section">
+        <div class="container">
+            <h2>Adoption Application</h2>
+            <div class="form-container">
+                <form id="adoptionForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Full Address *</label>
+                        <input type="text" id="address" name="address" placeholder="Street, City, State, ZIP Code" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="petInterest">Pet You're Interested In *</label>
+                        <select id="petInterest" name="petInterest" required>
+                            <option value="">Select a pet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Previous Pet Experience *</label>
+                        <textarea id="experience" name="experience" rows="4" placeholder="Tell us about any previous pets you've owned and your experience with animals..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="housing">Housing Type *</label>
+                        <select id="housing" name="housing" required>
+                            <option value="">Select housing type</option>
+                            <option value="own">Own Home</option>
+                            <option value="rent">Rent</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="condo">Condo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="landlordPermission">If renting, does your landlord allow pets?</label>
+                        <select id="landlordPermission" name="landlordPermission">
+                            <option value="">Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="not-applicable">Not Applicable</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="household">Number of People in Household *</label>
+                        <input type="number" id="household" name="household" min="1" max="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="children">Children in Household</label>
+                        <select id="children" name="children">
+                            <option value="none">None</option>
+                            <option value="under5">Under 5 years</option>
+                            <option value="5-12">5-12 years</option>
+                            <option value="teens">Teenagers</option>
+                            <option value="mixed">Mixed ages</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="otherPets">Other Pets in Home</label>
+                        <textarea id="otherPets" name="otherPets" rows="3" placeholder="List any other pets you currently have (type, breed, age, gender)..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="vet">Veterinarian Information</label>
+                        <input type="text" id="vet" name="vet" placeholder="Vet clinic name and phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="adoptionReason">Why do you want to adopt a pet? *</label>
+                        <textarea id="adoptionReason" name="adoptionReason" rows="4" placeholder="Tell us about your reasons for adopting and what you're looking for in a pet..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="dailySchedule">Describe Your Typical Daily Schedule</label>
+                        <textarea id="dailySchedule" name="dailySchedule" rows="3" placeholder="How much time will the pet spend alone? Exercise routine? etc."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="agreeTerms" required>
+                            I understand that completing this application does not guarantee adoption and agree to the adoption terms and conditions *
+                        </label>
+                    </div>
+                    <button type="submit" class="btn">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PetResQ</h3>
+                    <p>Creating a kinder world for animals through digital awareness, community participation, and online adoption management.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="adopt.html">Adopt a Pet</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="stories.html">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Pet Care Blog</a></li>
+                        <li><a href="#">Adoption Process</a></li>
+                        <li><a href="#">Foster Program</a></li>
+                        <li><a href="#">Animal Rights</a></li>
+                        <li><a href="#">Emergency Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rescue Street, Petville</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@petresq.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 PetResQ. All rights reserved. | Rescue. Foster. Adopt.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/pets.js"></script>
+    <script>
+        // Initialize adoption page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPets();
+            setupPetFilters();
+        });
+    </script>
+</body>
+</html>

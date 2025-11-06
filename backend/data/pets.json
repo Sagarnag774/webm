@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Buddy",
+    "type": "dog",
+    "breed": "Golden Retriever",
+    "age": "2 years",
+    "location": "New York",
+    "status": "available",
+    "image": "https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=662&q=80",
+    "description": "Friendly and energetic golden retriever who loves playing fetch and going for walks."
+  },
+  {
+    "id": 2,
+    "name": "Luna",
+    "type": "cat",
+    "breed": "Siamese",
+    "age": "1 year",
+    "location": "Chicago",
+    "status": "pending",
+    "image": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80",
+    "description": "Elegant Siamese cat who enjoys quiet environments and gentle affection."
+  },
+  {
+    "id": 3,
+    "name": "Max",
+    "type": "dog",
+    "breed": "Beagle",
+    "age": "3 years",
+    "location": "Los Angeles",
+    "status": "adopted",
+    "image": "https://images.unsplash.com/photo-1576201836106-db1751073e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80",
+    "description": "Curious beagle with a great sense of smell and friendly personality."
+  },
+  {
+    "id": 4,
+    "name": "Whiskers",
+    "type": "cat",
+    "breed": "Tabby",
+    "age": "6 months",
+    "location": "Miami",
+    "status": "available",
+    "image": "https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    "description": "Playful young tabby cat who loves chasing toys and cuddling."
+  }
+]

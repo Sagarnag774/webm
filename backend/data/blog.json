@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "How to Prepare Your Home for a New Pet",
+    "excerpt": "Getting ready to welcome a new furry friend? Here's everything you need to know to prepare your home, from pet-proofing to essential supplies.",
+    "content": "Full blog content would go here...",
+    "date": "2023-10-15",
+    "image": "https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1150&q=80",
+    "category": "Pet Care",
+    "readTime": "5 min read",
+    "author": "Dr. Sarah Wilson"
+  },
+  {
+    "id": 2,
+    "title": "Understanding Pet Vaccinations: A Complete Guide",
+    "excerpt": "A comprehensive guide to pet vaccinations - what they are, when they're needed, and why they're crucial for your pet's health.",
+    "content": "Full blog content would go here...",
+    "date": "2023-10-08",
+    "image": "https://images.unsplash.com/photo-1583512603806-077998240c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1158&q=80",
+    "category": "Health & Wellness",
+    "readTime": "8 min read",
+    "author": "Dr. Michael Chen"
+  }
+]

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care Blog - PetResQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Accessibility Bar -->
+    <div class="accessibility-bar">
+        <div class="container">
+            <div class="accessibility-controls">
+                <button class="accessibility-btn" id="contrastToggle">
+                    <i class="fas fa-adjust"></i> High Contrast
+                </button>
+                <button class="accessibility-btn" id="textSizeIncrease">
+                    <i class="fas fa-text-height"></i> Increase Text
+                </button>
+                <button class="accessibility-btn" id="textSizeDecrease">
+                    <i class="fas fa-text-width"></i> Decrease Text
+                </button>
+                <button class="accessibility-btn" id="readAloudToggle">
+                    <i class="fas fa-volume-up"></i> Read Aloud
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-paw"></i>
+                    <span>PetResQ</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adopt.html">Adopt</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Pet Care & Awareness Blog</h1>
+            <p>Expert advice, tips, and resources for responsible pet ownership and animal welfare. Learn how to provide the best care for your furry friends.</p>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="features">
+        <div class="container">
+            <h2>Browse by Category</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dog"></i>
+                    </div>
+                    <h3>Dog Care</h3>
+                    <p>Training, health, nutrition, and care tips specifically for your canine companions.</p>
+                    <a href="#" class="btn">Read Articles</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cat"></i>
+                    </div>
+                    <h3>Cat Care</h3>
+                    <p>Everything about feline health, behavior, enrichment, and creating the perfect home environment.</p>
+                    <a href="#" class="btn">Read Articles</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health & Wellness</h3>
+                    <p>Veterinary advice, preventive care, nutrition, and wellness tips for all types of pets.</p>
+                    <a href="#" class="btn">Read Articles</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Training & Behavior</h3>
+                    <p>Positive training methods, behavior solutions, and tips for building strong bonds with your pets.</p>
+                    <a href="#" class="btn">Read Articles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="blog-section">
+        <div class="container">
+            <h2>Latest Articles</h2>
+            <div class="blog-grid" id="blogGrid">
+                <!-- Blog posts will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="ai-helper">
+        <div class="container">
+            <h2>Stay Updated with Pet Care Tips</h2>
+            <p>Subscribe to our newsletter for the latest pet care advice, adoption stories, and PetResQ updates delivered to your inbox.</p>
+            <div class="form-container" style="max-width: 500px;">
+                <form id="newsletterForm">
+                    <div class="form-group">
+                        <label for="newsletterName">Your Name</label>
+                        <input type="text" id="newsletterName" name="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="newsletterEmail">Email Address *</label>
+                        <input type="email" id="newsletterEmail" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Interests (Select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="interests" value="dog-care"> Dog Care & Training
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="cat-care"> Cat Care & Behavior
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="training"> Training Tips
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="health"> Health & Wellness
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="adoption"> Adoption Stories
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="events"> Events & Workshops
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="volunteer"> Volunteer Opportunities
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="fundraising"> Fundraising Updates
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="petType">What type of pets do you have?</label>
+                        <select id="petType" name="petType">
+                            <option value="">Select pet type</option>
+                            <option value="dog">Dog(s)</option>
+                            <option value="cat">Cat(s)</option>
+                            <option value="both">Both Dogs & Cats</option>
+                            <option value="other">Other Pets</option>
+                            <option value="none">None, but interested</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="agreePrivacy" required>
+                            I agree to the privacy policy and understand I can unsubscribe at any time *
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="weeklyUpdates" checked>
+                            Send me weekly pet care tips and updates
+                        </label>
+                    </div>
+                    <button type="submit" class="btn">Subscribe to Newsletter</button>
+                    <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: rgba(255,255,255,0.8);">
+                        <i class="fas fa-shield-alt"></i> We respect your privacy and will never share your information.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PetResQ</h3>
+                    <p>Creating a kinder world for animals through digital awareness, community participation, and online adoption management.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="adopt.html">Adopt a Pet</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="stories.html">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Pet Care Blog</a></li>
+                        <li><a href="#">Adoption Process</a></li>
+                        <li><a href="#">Foster Program</a></li>
+                        <li><a href="#">Animal Rights</a></li>
+                        <li><a href="#">Emergency Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rescue Street, Petville</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@petresq.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 PetResQ. All rights reserved. | Rescue. Foster. Adopt.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>

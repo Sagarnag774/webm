@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - PetResQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Accessibility Bar -->
+    <div class="accessibility-bar">
+        <div class="container">
+            <div class="accessibility-controls">
+                <button class="accessibility-btn" id="contrastToggle">
+                    <i class="fas fa-adjust"></i> High Contrast
+                </button>
+                <button class="accessibility-btn" id="textSizeIncrease">
+                    <i class="fas fa-text-height"></i> Increase Text
+                </button>
+                <button class="accessibility-btn" id="textSizeDecrease">
+                    <i class="fas fa-text-width"></i> Decrease Text
+                </button>
+                <button class="accessibility-btn" id="readAloudToggle">
+                    <i class="fas fa-volume-up"></i> Read Aloud
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-paw"></i>
+                    <span>PetResQ</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adopt.html">Adopt</a></li>
+                    <li><a href="volunteer.html" class="active">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Become a PetResQ Volunteer</h1>
+            <p>Join our dedicated team of animal lovers and make a real difference in the lives of rescue animals. Your time and skills can save lives.</p>
+        </div>
+    </section>
+
+    <!-- Volunteer Opportunities -->
+    <section class="features">
+        <div class="container">
+            <h2>Volunteer Opportunities</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Animal Care</h3>
+                    <p>Help with feeding, grooming, socializing, and exercising our rescue animals. Perfect for animal lovers!</p>
+                    <ul>
+                        <li>Feeding and watering</li>
+                        <li>Grooming and bathing</li>
+                        <li>Exercise and playtime</li>
+                        <li>Socialization training</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Foster Care</h3>
+                    <p>Provide temporary homes for animals awaiting adoption. We supply all necessary food and supplies.</p>
+                    <ul>
+                        <li>Temporary housing</li>
+                        <li>Basic training</li>
+                        <li>Socialization</li>
+                        <li>Medical care support</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Event Support</h3>
+                    <p>Help organize and run adoption events, fundraisers, and community outreach programs.</p>
+                    <ul>
+                        <li>Adoption events</li>
+                        <li>Fundraising</li>
+                        <li>Community outreach</li>
+                        <li>Educational programs</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Facility Support</h3>
+                    <p>Assist with cleaning, maintenance, and improvement projects at our shelter facilities.</p>
+                    <ul>
+                        <li>Cleaning and sanitizing</li>
+                        <li>Maintenance work</li>
+                        <li>Landscaping</li>
+                        <li>Repair projects</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="features" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2>Volunteer Requirements</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Age Requirements</h3>
+                    <p>Volunteers must be at least 16 years old. Volunteers under 18 need parental consent.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Time Commitment</h3>
+                    <p>We ask for a minimum commitment of 4 hours per week for at least 3 months.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Training</h3>
+                    <p>All volunteers complete orientation and role-specific training before starting.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Background Check</h3>
+                    <p>Some positions may require a background check for the safety of our animals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Form -->
+    <section class="form-section">
+        <div class="container">
+            <h2>Volunteer Application</h2>
+            <div class="form-container">
+                <form id="volunteerForm">
+                    <div class="form-group">
+                        <label for="volunteerName">Full Name *</label>
+                        <input type="text" id="volunteerName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerEmail">Email Address *</label>
+                        <input type="email" id="volunteerEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerPhone">Phone Number *</label>
+                        <input type="tel" id="volunteerPhone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerAddress">Address</label>
+                        <input type="text" id="volunteerAddress" name="address" placeholder="Street, City, State, ZIP Code">
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerAge">Age *</label>
+                        <input type="number" id="volunteerAge" name="age" min="16" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="availability">Availability *</label>
+                        <select id="availability" name="availability" required>
+                            <option value="">Select your availability</option>
+                            <option value="weekdays">Weekdays</option>
+                            <option value="weekends">Weekends</option>
+                            <option value="both">Both Weekdays & Weekends</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="hoursAvailable">Hours Available Per Week *</label>
+                        <select id="hoursAvailable" name="hoursAvailable" required>
+                            <option value="">Select hours</option>
+                            <option value="1-4">1-4 hours</option>
+                            <option value="5-8">5-8 hours</option>
+                            <option value="9-12">9-12 hours</option>
+                            <option value="13+">13+ hours</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Volunteer Interests *</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="interests" value="animal_care"> Animal Care & Socialization
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="fostering"> Fostering Animals
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="events"> Event Support
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="admin"> Administrative Work
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="maintenance"> Facility Maintenance
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="transport"> Animal Transport
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="outreach"> Community Outreach
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Previous Experience with Animals</label>
+                        <textarea id="experience" name="experience" rows="4" placeholder="Tell us about any previous experience with animals, volunteer work, or relevant skills..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="skills">Special Skills & Qualifications</label>
+                        <textarea id="skills" name="skills" rows="4" placeholder="Any relevant skills, certifications, or qualifications (veterinary, training, etc.)..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="emergencyContact">Emergency Contact Information *</label>
+                        <input type="text" id="emergencyContact" name="emergencyContact" placeholder="Name and Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reference">Reference (Optional)</label>
+                        <input type="text" id="reference" name="reference" placeholder="Name, relationship, and contact information">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="agreeTerms" required>
+                            I agree to abide by PetResQ's volunteer policies and procedures *
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="backgroundCheck" required>
+                            I understand that some positions may require a background check *
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="newsletter">
+                            I would like to receive updates about volunteer opportunities and PetResQ news
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PetResQ</h3>
+                    <p>Creating a kinder world for animals through digital awareness, community participation, and online adoption management.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="adopt.html">Adopt a Pet</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="stories.html">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Pet Care Blog</a></li>
+                        <li><a href="#">Adoption Process</a></li>
+                        <li><a href="#">Foster Program</a></li>
+                        <li><a href="#">Animal Rights</a></li>
+                        <li><a href="#">Emergency Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rescue Street, Petville</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@petresq.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 PetResQ. All rights reserved. | Rescue. Foster. Adopt.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories - PetResQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Accessibility Bar -->
+    <div class="accessibility-bar">
+        <div class="container">
+            <div class="accessibility-controls">
+                <button class="accessibility-btn" id="contrastToggle">
+                    <i class="fas fa-adjust"></i> High Contrast
+                </button>
+                <button class="accessibility-btn" id="textSizeIncrease">
+                    <i class="fas fa-text-height"></i> Increase Text
+                </button>
+                <button class="accessibility-btn" id="textSizeDecrease">
+                    <i class="fas fa-text-width"></i> Decrease Text
+                </button>
+                <button class="accessibility-btn" id="readAloudToggle">
+                    <i class="fas fa-volume-up"></i> Read Aloud
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-paw"></i>
+                    <span>PetResQ</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adopt.html">Adopt</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="stories.html" class="active">Stories</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Happy Tails</h1>
+            <p>Read heartwarming stories of pets who found their forever homes through PetResQ. These success stories show the incredible impact of adoption.</p>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <h2>Success Stories</h2>
+            <div class="stories-grid" id="storiesGrid">
+                <!-- Stories will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Your Story -->
+    <section class="form-section">
+        <div class="container">
+            <h2>Share Your Success Story</h2>
+            <div class="form-container">
+                <p>Did you adopt a pet from PetResQ? We'd love to hear your story and see how your furry friend is doing! Share your experience to inspire others to adopt.</p>
+                <form id="successStoryForm">
+                    <div class="form-group">
+                        <label for="adopterName">Your Name *</label>
+                        <input type="text" id="adopterName" name="adopterName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adopterEmail">Email Address *</label>
+                        <input type="email" id="adopterEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="petName">Pet's Name *</label>
+                        <input type="text" id="petName" name="petName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adoptionDate">Adoption Date</label>
+                        <input type="date" id="adoptionDate" name="adoptionDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="petType">Type of Pet</label>
+                        <select id="petType" name="petType">
+                            <option value="">Select pet type</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="petBreed">Breed (if known)</label>
+                        <input type="text" id="petBreed" name="petBreed" placeholder="e.g., Labrador Mix, Siamese, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="successStory">Your Story *</label>
+                        <textarea id="successStory" name="story" rows="6" placeholder="Tell us about your adoption journey: How did you find your pet? How have they enriched your life? Any special moments or challenges?" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="highlights">Special Highlights & Funny Moments</label>
+                        <textarea id="highlights" name="highlights" rows="3" placeholder="Any funny habits, special achievements, or heartwarming moments with your pet..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="photoTips">Photo Submission</label>
+                        <input type="file" id="photoTips" name="photos" multiple accept="image/*">
+                        <small>You can upload multiple photos of your happy pet (max 5 photos, 5MB each)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="advice">Advice for Potential Adopters</label>
+                        <textarea id="advice" name="advice" rows="3" placeholder="What advice would you give to someone considering adoption?"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="featurePermission" required>
+                            I give PetResQ permission to feature my story and photos on our website, social media, and promotional materials *
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="contactPermission">
+                            PetResQ may contact me for more details or updates about my story
+                        </label>
+                    </div>
+                    <button type="submit" class="btn">Share My Story</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PetResQ</h3>
+                    <p>Creating a kinder world for animals through digital awareness, community participation, and online adoption management.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="adopt.html">Adopt a Pet</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="stories.html">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Pet Care Blog</a></li>
+                        <li><a href="#">Adoption Process</a></li>
+                        <li><a href="#">Foster Program</a></li>
+                        <li><a href="#">Animal Rights</a></li>
+                        <li><a href="#">Emergency Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rescue Street, Petville</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@petresq.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 PetResQ. All rights reserved. | Rescue. Foster. Adopt.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - PetResQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Accessibility Bar -->
+    <div class="accessibility-bar">
+        <div class="container">
+            <div class="accessibility-controls">
+                <button class="accessibility-btn" id="contrastToggle">
+                    <i class="fas fa-adjust"></i> High Contrast
+                </button>
+                <button class="accessibility-btn" id="textSizeIncrease">
+                    <i class="fas fa-text-height"></i> Increase Text
+                </button>
+                <button class="accessibility-btn" id="textSizeDecrease">
+                    <i class="fas fa-text-width"></i> Decrease Text
+                </button>
+                <button class="accessibility-btn" id="readAloudToggle">
+                    <i class="fas fa-volume-up"></i> Read Aloud
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-paw"></i>
+                    <span>PetResQ</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adopt.html">Adopt</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html" class="active">Donate</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Support Our Mission</h1>
+            <p>Your generous donations help us rescue, care for, and find loving homes for animals in need. Every contribution makes a difference.</p>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Your Donation Makes a Difference</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>$25</h3>
+                    <p>Feeds one shelter pet for two weeks</p>
+                    <small>Provides nutritious food and fresh water</small>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <h3>$50</h3>
+                    <p>Covers essential vaccinations</p>
+                    <small>Protects against common diseases</small>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>$100</h3>
+                    <p>Provides emergency medical care</p>
+                    <small>Life-saving treatments and surgeries</small>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>$250</h3>
+                    <p>Sponsors a kennel for one month</p>
+                    <small>Safe shelter and daily care</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form -->
+    <section class="form-section">
+        <div class="container">
+            <h2>Make a Donation</h2>
+            <div class="form-container">
+                <p>Your donation helps us provide food, shelter, medical care, and love to animals in need. Every contribution, no matter the size, makes a meaningful impact.</p>
+                <form id="donationForm">
+                    <div class="form-group">
+                        <label for="donorName">Full Name *</label>
+                        <input type="text" id="donorName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorEmail">Email Address *</label>
+                        <input type="email" id="donorEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorPhone">Phone Number</label>
+                        <input type="tel" id="donorPhone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="donorAddress">Address</label>
+                        <input type="text" id="donorAddress" name="address" placeholder="Street, City, State, ZIP Code">
+                    </div>
+                    <div class="form-group">
+                        <label for="donationType">Donation Type *</label>
+                        <select id="donationType" name="donationType" required>
+                            <option value="">Select donation type</option>
+                            <option value="one-time">One-time Donation</option>
+                            <option value="monthly">Monthly Donation</option>
+                            <option value="quarterly">Quarterly Donation</option>
+                            <option value="annual">Annual Donation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="donationAmount">Donation Amount *</label>
+                        <select id="donationAmount" name="donationAmount" required>
+                            <option value="">Select amount</option>
+                            <option value="25">$25</option>
+                            <option value="50">$50</option>
+                            <option value="100">$100</option>
+                            <option value="250">$250</option>
+                            <option value="500">$500</option>
+                            <option value="1000">$1,000</option>
+                            <option value="other">Other Amount</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="customAmountContainer" style="display: none;">
+                        <label for="customAmount">Custom Amount *</label>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <span style="font-weight: bold;">$</span>
+                            <input type="number" id="customAmount" name="customAmount" min="1" step="0.01" placeholder="0.00" style="flex: 1;">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dedication">Dedication (Optional)</label>
+                        <select id="dedication" name="dedication">
+                            <option value="">Select dedication type</option>
+                            <option value="honor">In Honor Of</option>
+                            <option value="memory">In Memory Of</option>
+                            <option value="celebration">Celebration</option>
+                            <option value="thanks">Thanksgiving</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="dedicationNameContainer" style="display: none;">
+                        <label for="dedicationName">Name for Dedication</label>
+                        <input type="text" id="dedicationName" name="dedicationName" placeholder="Enter name for dedication">
+                    </div>
+                    <div class="form-group">
+                        <label for="donationMessage">Message (Optional)</label>
+                        <textarea id="donationMessage" name="message" rows="3" placeholder="Any special instructions, dedication message, or notes..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="newsletter" checked>
+                            Send me updates about PetResQ and how my donation is making a difference
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="anonymous">
+                            I would like to make this donation anonymously
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="receipt" checked>
+                            Please email me a donation receipt for tax purposes
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-accent">Submit Donation Interest</button>
+                    <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: #666;">
+                        <i class="fas fa-lock"></i> Your information is secure. We will contact you to complete the payment process.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Ways to Help -->
+    <section class="features" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2>Other Ways to Support PetResQ</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Amazon Wishlist</h3>
+                    <p>Purchase needed supplies directly from our Amazon wishlist. Everything from food and toys to medical supplies.</p>
+                    <a href="#" class="btn">View Wishlist</a>
+                </div>
+                <div class="feature-card">
+                    <h3>Corporate Matching</h3>
+                    <p>Double your impact! Many employers match charitable donations. Check if your company has a matching gift program.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="feature-card">
+                    <h3>Planned Giving</h3>
+                    <p>Include PetResQ in your estate planning to create a lasting legacy of compassion for animals in need.</p>
+                    <a href="#" class="btn">Get Information</a>
+                </div>
+                <div class="feature-card">
+                    <h3>Sponsor an Animal</h3>
+                    <p>Become a special sponsor for a specific animal, covering all their care costs until they find a forever home.</p>
+                    <a href="#" class="btn">Sponsor Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PetResQ</h3>
+                    <p>Creating a kinder world for animals through digital awareness, community participation, and online adoption management.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="adopt.html">Adopt a Pet</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="stories.html">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Pet Care Blog</a></li>
+                        <li><a href="#">Adoption Process</a></li>
+                        <li><a href="#">Foster Program</a></li>
+                        <li><a href="#">Animal Rights</a></li>
+                        <li><a href="#">Emergency Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rescue Street, Petville</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@petresq.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 PetResQ. All rights reserved. | Rescue. Foster. Adopt.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>
